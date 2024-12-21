@@ -1,16 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/output.css">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/output.css" />
+    <link rel="stylesheet" href="./src/styles.css" />
     <title>GlobexConvert</title>
-</head>
-<body class="m-0 p-0 bg-gray-100">
-    <header class="header mt-20 text-center ">
-        <h1 class="text-5xl font-bold mb-4">GlobexConvert</h1>
-        <p class="text-xl font-semibold italic tracking-wide text-gray-500">Your Global Currency Companion</p>
-    </header>
+  </head>
+  <body class="min-h-screen m-0 p-0 bg-gray-100 flex justify-center items-center">
+    <div class="container w-[90%] max-w-[600px]">
+        <header class="header mt-4 text-center mb-8">
+            <h1 class="text-5xl font-bold mb-4">GlobexConvert</h1>
+            <p class="text-xl font-semibold italic tracking-wide text-gray-500">
+                Your Global Currency Companion
+            </p>
+        </header>
 
-</body>
+        <div class="toggle-container  flex justify-center mb-6">
+            <button class="toggle-btn active border rounded-s-md w-full border-gray-500 px-8 py-2 font-semibold text-xl text-gray-700 tracking-wide"><i class="fa-solid fa-indian-rupee-sign"></i>
+                Convert
+            </button>
+            <button class="toggle-btn border rounded-e-md w-full border-gray-500 px-8 py-2 font-semibold text-xl text-gray-700 tracking-wide"><i class="fa-solid fa-arrow-right-arrow-left"></i>
+                Exchange
+            </button>
+        </div>
+        
+        <div id="convert-mode" class="convert-card bg-white py-6 flex flex-col justify-center relative px-6 mx-8 md:mx-0 shadow rounded-3xl" >
+            <div class="divide-y divide-gray-200">
+                <div class="py-8 text-xl leading-6 space-y-4 text-gray-700 ">
+                    <div class="flex flex-col">
+                        <label for="amt" class="leading-loose">Amount</label>
+                        <input
+                            id="amt"
+                            type="number"
+                            class="px-4 py-2 text-base border focus:ring-gray-500 focus:border-gray-900 w-full border-gray-300 rounded-md focus:outline-none text-gray-600"
+                            placeholder="Enter the amount"
+                        />
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="flex flex-1 flex-col">
+                            <label for="from" class="leading-loose">From</label>
+                            <select id="from" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" required>
+                                <option value="USD">USD - US Dollar</option>
+                                <option value="EUR">EUR - Euro</option>
+                                <option value="GBP">GBP - British Pound</option>
+                                <option value="JPY">JPY - Japanese Yen</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-1 flex-col">
+                            <label id="to" class="leading-loose">To</label>
+                            <select id="to" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" required>
+                                <option value="EUR">EUR - Euro</option>
+                                <option value="USD">USD - US Dollar</option>
+                                <option value="GBP">GBP - British Pound</option>
+                                <option value="JPY">JPY - Japanese Yen</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-4">
+                    <button class="bg-blue-500 w-full text-white px-4 py-3 rounded-md tracking-wide font-semibold">
+                    Convert
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="exchange-mode" class="converted-card bg-white py-6 flex flex-col justify-center relative px-4 mx-8 md:mx-0 shadow rounded-3xl" style="display: none;">
+          <div class="divide-y divide-gray-200">
+            <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
+              <div class="flex flex-col">
+                <label for="base" class="leading-loose">Base Currency</label>
+                <select id="base" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" required>
+                    <option value="USD">USD - US Dollar</option>
+                    <option value="EUR">EUR - Euro</option>
+                    <option value="GBP">GBP - British Pound</option>
+                    <option value="JPY">JPY - Japanese Yen</option>
+                  </select>
+              </div>
+            </div>
+            <div class="pt-4">
+              <button class="bg-blue-500 w-full text-white px-4 py-3 rounded-md tracking-wide font-semibold">
+                Get Exchange Rates
+              </button>
+            </div>
+          </div>
+        </div>
+    </div>
+  </body>
 </html>
