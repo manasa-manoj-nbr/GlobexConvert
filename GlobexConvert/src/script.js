@@ -20,11 +20,11 @@ toggleBtn.forEach((btn) => {
         btn.classList.add("active");
         const mode = btn.getAttribute("data-mode")
         if (mode === "convert") {
-            exchangeMode.style.display = "none"
-            convertMode.style.display = "flex"
-        } else {
-            convertMode.style.display = "none";
-            exchangeMode.style.display = "flex"
+            convertMode.classList.add("active")
+            exchangeMode.classList.remove("active")
+        } else{
+            exchangeMode.classList.add("active")
+            convertMode.classList.remove("active")
         }
     });
 });

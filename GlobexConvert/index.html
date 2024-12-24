@@ -12,9 +12,9 @@
     <title>GlobexConvert</title>
   </head>
   <body class="min-h-screen m-0 p-0 bg-gray-100 flex justify-center items-center">
-    <div class="container w-[90%] max-w-[500px]">
+    <div class="container relative w-[90%] max-w-[500px]">
         <header class="header mt-4 text-center mb-8">
-            <h1 class="text-5xl font-bold mb-4">GlobexConvert</h1>
+            <h1 class="text-5xl mt-12 font-bold mb-4">GlobexConvert</h1>
             <p class="text-xl font-semibold italic tracking-wide text-gray-500">
                 Your Global Currency Companion
             </p>
@@ -29,7 +29,7 @@
             </button>
         </div>
         
-        <div id="convert-mode" class="convert-card bg-white py-6 flex flex-col justify-center relative px-6 mx-8 md:mx-0 shadow rounded-3xl" >
+        <div id="convert-mode" class="form active convert-card bg-white py-6 flex flex-col justify-center absolute px-6 mx-2 md:mx-0 shadow rounded-3xl min-h-[400px]" >
             <div class="divide-y divide-gray-200">
                 <div class="py-8 text-xl leading-6 space-y-4 text-gray-700 ">
                     <div class="flex flex-col">
@@ -385,7 +385,7 @@
                 </div> 
             </div>
         </div>
-        <div id="exchange-mode" class="converted-card bg-white py-6 flex flex-col justify-center relative px-4 mx-8 md:mx-0 shadow rounded-3xl" style="display: none;">
+        <div id="exchange-mode" class="form  bg-white py-6 flex flex-col justify-center relative px-6 mx-2 md:mx-0 shadow rounded-3xl min-h-[400px]">
           <div class="divide-y divide-gray-200">
             <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
               <div class="flex flex-col">
